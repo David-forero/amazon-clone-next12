@@ -10,7 +10,7 @@ import { currencyFormat } from "../libs/format-currency"
 
 const stripePromise = loadStripe(process.env.stripe_public_key, process.env.STRIPE_SECRET_KEY);
 
-const checkout = () => {
+const Checkout = () => {
     const items = useSelector(selectItems);
     const total = useSelector(selectTotal);
     const {data: session} = useSession();
@@ -77,4 +77,4 @@ const checkout = () => {
     )
 }
 
-export default checkout
+export default Checkout

@@ -23,8 +23,8 @@ const Orders = ({orders}) => {
             }
 
             <div className="mt-5 space-y-4">
-              {orders?.map(({id, amount, amountShipping, items, timestamp, images}) => (
-                <Order id={id} key={id} amount={amount} amountShipping={amountShipping} items={items} timestamp={timestamp} images={images} />
+              {orders?.map(({id, amount, amountShipping, items, timestamp, images}, i) => (
+                <Order id={id} key={i} amount={amount} amountShipping={amountShipping} items={items} timestamp={timestamp} images={images} />
               ))}
             </div>
         </main>
